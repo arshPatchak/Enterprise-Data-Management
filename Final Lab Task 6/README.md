@@ -248,7 +248,7 @@ db.users.find().pretty()
 
 
 ![image alt](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/5e05b5802edc7c13d85e46ac49b1cdf71afa8455/Final%20Lab%20Task%206/Files/2.1.png)
-
+![image alt](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/e16562b5cf04b8e036b177cde76c048f04c85750/Final%20Lab%20Task%206/Files/2.1.1.png)
 
 2. find all posts
 
