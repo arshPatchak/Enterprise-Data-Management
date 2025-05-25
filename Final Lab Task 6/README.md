@@ -198,63 +198,106 @@ db.comments.insert({username:"ScumbagSteve", comment:"Denied your PR cause I fou
 query the `movies` collection to
 
 1. get all documents
-```
+
 db.movies.find()
 
-![alt image](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/8163f8f88341af9e24097b656fb274ebdca84dfe/Final%20Lab%20Task%206/Files/1.1.png)
+![image alt](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/5e05b5802edc7c13d85e46ac49b1cdf71afa8455/Final%20Lab%20Task%206/Files/1.png)
 
+
+![image alt](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/5e05b5802edc7c13d85e46ac49b1cdf71afa8455/Final%20Lab%20Task%206/Files/1.1.png)
 
 2. get all documents with `writer` set to "Quentin Tarantino"
-```
+
 db.movies.find({writer:"Quentin Tarantino"})
-```
+
+![image alt](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/5e05b5802edc7c13d85e46ac49b1cdf71afa8455/Final%20Lab%20Task%206/Files/2.png)
+
 3. get all documents where `actors` include "Brad Pitt"
-```
+
 db.movies.find({actors:"Brad Pitt"})
-```
+![image alt](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/5e05b5802edc7c13d85e46ac49b1cdf71afa8455/Final%20Lab%20Task%206/Files/3.png)
 4. get all documents with `franchise` set to "The Hobbit"
-```
+
 db.movies.find({franchise:"The Hobbit"})
-```
+
+
+![image alt](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/5e05b5802edc7c13d85e46ac49b1cdf71afa8455/Final%20Lab%20Task%206/Files/4.png)
+
+
 5. get all movies released in the 90s
-```
+
 db.movies.find({year:{$gt:"1990", $lt:"2000"}})
-```
+
+
+![image alt](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/5e05b5802edc7c13d85e46ac49b1cdf71afa8455/Final%20Lab%20Task%206/Files/5.png)
+
+
 6. get all movies released before the year 2000 or after 2010
-```
+
 db.movies.find({$or:[{year:{$gt:"2010"}},{year: {$lt:"2000"}}]})
+
+
+![image alt](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/5e05b5802edc7c13d85e46ac49b1cdf71afa8455/Final%20Lab%20Task%206/Files/6.png)
 
 
 ## Querying related collections
 
 1. find all users
-```
+
 db.users.find().pretty()
-```
+
+
+![image alt](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/5e05b5802edc7c13d85e46ac49b1cdf71afa8455/Final%20Lab%20Task%206/Files/2.1.png)
+
+
 2. find all posts
-```
+
 db.posts.find().pretty()
-```
+
+
+![image alt](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/5e05b5802edc7c13d85e46ac49b1cdf71afa8455/Final%20Lab%20Task%206/Files/2.2.final.png)
+![image](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/5e05b5802edc7c13d85e46ac49b1cdf71afa8455/Final%20Lab%20Task%206/Files/2.2.1.png)
+
 3. find all posts that was authored by "GoodGuyGreg"
-```
+
 db.posts.find({username:"GoodGuyGreg"})
-```
+
+
+![image alt](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/5e05b5802edc7c13d85e46ac49b1cdf71afa8455/Final%20Lab%20Task%206/Files/2.2.png)
+
+
 4. find all posts that was authored by "ScumbagSteve"
-```
+
 db.posts.find({username:"ScumbagSteve"})
-```
+
+
+![image alt](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/5e05b5802edc7c13d85e46ac49b1cdf71afa8455/Final%20Lab%20Task%206/Files/2.3.png)
+
+
 5. find all comments
-```
+   
 db.comments.find().pretty()
-```
+
+
+![image alt](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/5e05b5802edc7c13d85e46ac49b1cdf71afa8455/Final%20Lab%20Task%206/Files/2.4.png)
+
+
 6. find all comments that was authored by "GoodGuyGreg"
-```
+
 db.comments.find({username:"GoodGuyGreg"})
-```
+
+
+![image alt](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/5e05b5802edc7c13d85e46ac49b1cdf71afa8455/Final%20Lab%20Task%206/Files/2.5.png)
+
+
 7. find all comments that was authored by "ScumbagSteve"
-```
-db.comments.find({username:"ScumbagSteve"})
-```
+
+db.comments.find({username:"ScumbagSteve"}
+
+
+![image alt](https://github.com/ReynellMiras24-103/Enterprise-Data-Management/blob/5e05b5802edc7c13d85e46ac49b1cdf71afa8455/Final%20Lab%20Task%206/Files/2.6.png)
+
+
 8. find all comments belonging to the post "Reports a bug in your code"
 
 db.comments.find({username: "Reports a bug in your code"})
